@@ -10,9 +10,9 @@ class Player
     @beep = Gosu::Sample.new('./media/beep.wav')
   end
 
-  def warp(x, y)
-    @x = x
-    @y = y
+  def warp(x_player, y_player)
+    @x = x_player
+    @y = y_player
   end
 
   def turn_left

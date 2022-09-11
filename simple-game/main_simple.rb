@@ -34,7 +34,7 @@ class Tutorial < Gosu::Window
   def draw
     @background_image.draw(0, 0, ZOrder::BACKGROUND)
     @player.draw
-    @stars.each { |star| star.draw }
+    @stars.each(&:draw)
     @font.draw_text("Score: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, Gosu::Color::YELLOW)
   end
 
